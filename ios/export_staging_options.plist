@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>compileBitcode</key>
+    <true/>
+    <key>method</key>
+    <string>app-store</string>
+    <!-- Unhide provisioningProfiles if signingStyle is manual -->
+    <!-- <key>provisioningProfiles</key>
+    <dict>
+        <key>BUNDLE_ID</key>
+        <string>PROVISIONING_PROFILE</string>
+    </dict> -->
+    <key>signingStyle</key>
+    <!-- signingStyle: manual or automatic -->
+    <!-- <string>manual</string> -->
+    <!-- <string>automatic</string> -->
+    <key>stripSwiftSymbols</key>
+    <true/>
+    <key>teamID</key>
+    <string>TEAM_ID_VALUE</string>
+    <key>thinning</key>
+    <string>&lt;none&gt;</string>
+</dict>
+</plist>

@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    
+    "ios-pod": "cd ios; pod install; cd ..",
+    "ios-pod-m1": "cd ios; arch -x86_64 pod install; cd ..",
+    "ios-pod-update": "cd ios; pod install --repo-update; cd ..",
+    
+    "ios-simulator": "react-native run-ios --scheme Test --simulator='iPhone 14 Pro'",
+    "ios-main.jsbundle": "react-native bundle --entry-file='index.js' --bundle-output='./ios/Test/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'",
+    
+    "android-debug-apk": "npx jetify && react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/; cd android; ./gradlew assembleDebug;",
+    "android-release-apk": "npx jetify && react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/build/intermediates/res/merged/release/ && rm -rf android/app/src/main/res/drawable-* && rm -rf android/app/src/main/res/raw/* && cd android && ./gradlew assembleRelease && cd ..",
+    "android-release-aab": "npx jetify && react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/build/intermediates/res/merged/release/ && rm -rf android/app/src/main/res/drawable-* && rm -rf android/app/src/main/res/raw/* && cd android && ./gradlew bundleRelease && cd .."
+  }
+}
